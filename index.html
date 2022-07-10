@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=1680 height=945></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -56,15 +56,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/MapBuild_Rev2.loader.js";
+      var loaderUrl = buildUrl + "/MapBuild_Rev3.loader.js";
       var config = {
-        dataUrl: buildUrl + "/MapBuild_Rev2.data",
-        frameworkUrl: buildUrl + "/MapBuild_Rev2.framework.js",
-        codeUrl: buildUrl + "/MapBuild_Rev2.wasm",
+        dataUrl: buildUrl + "/MapBuild_Rev3.data",
+        frameworkUrl: buildUrl + "/MapBuild_Rev3.framework.js",
+        codeUrl: buildUrl + "/MapBuild_Rev3.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "BinaryBeasts",
         productName: "BVCOENM",
-        productVersion: "0.1",
+        productVersion: "0.2",
         showBanner: unityShowBanner,
       };
 
@@ -95,8 +95,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "1680px";
+        canvas.style.height = "945px";
       }
 
       loadingBar.style.display = "block";
