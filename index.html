@@ -29,7 +29,7 @@
       var loadingScreen = document.querySelector("#unity-custom-loading-screen");
       var customLoadingBar = document.querySelector("#custom-loader");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      //var warningBanner = document.querySelector("#unity-warning");
+      var warningBanner = document.querySelector("#unity-warning");
 
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
@@ -39,7 +39,7 @@
       // user.
       function unityShowBanner(msg, type) {
         function updateBannerVisibility() {
-          //warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
         }
         var div = document.createElement('div');
         div.innerHTML = msg;
@@ -48,7 +48,7 @@
         else {
           if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
           setTimeout(function() {
-            //warningBanner.removeChild(div);
+            warningBanner.removeChild(div);
             updateBannerVisibility();
           }, 5000);
         }
@@ -79,7 +79,7 @@
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1;
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
+        unityShowBanner('Welcome to the BVCOE Map! You can find your class in just a moment.');
       } else {
         canvas.style.width = "960px";
         canvas.style.height = "600px";
